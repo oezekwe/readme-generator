@@ -25,7 +25,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'How do you describe this application?'
+        message: 'Enter your application\'s description: '
     },
 
     {
@@ -43,7 +43,7 @@ const questions = [
     {
         type: 'input',
         name: 'contribute',
-        message: 'What are the contributions?'
+        message: 'How do you contribute to the application?'
     },
 
     {
