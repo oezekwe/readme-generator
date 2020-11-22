@@ -56,7 +56,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Select one of the type of licenses: ',
-        choices: ['GNU', 'Apache', 'MIT', 'ISC']
+        choices: ['GNU GPLv2', 'GNU GPLv3', 'Apache', 'MIT', 'ISC']
     }
 ];
 
@@ -69,7 +69,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then((replies) => {
-        writeToFile('Readme.md', generateMarkdown({...replies}))
+        writeToFile('createReadMe.md', generateMarkdown({...replies}))
     });
 }
 

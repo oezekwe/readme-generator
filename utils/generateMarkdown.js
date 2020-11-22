@@ -1,6 +1,7 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  let badge= data.license.replace(/ /g,'_');
+  return `# ${data.title} &ensp;&ensp;&ensp;&ensp;![GitHub license](https://img.shields.io/badge/license-${badge}-blue.svg)
 
   ## Description
       ${data.description}
@@ -10,7 +11,7 @@ function generateMarkdown(data) {
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
-  * [Contributing](#contribute)
+  * [Contributing](#contributing)
   
   
   ## Installation
@@ -22,7 +23,7 @@ function generateMarkdown(data) {
 
 
   ## License
-      ${data.license}
+      Application is under by the ${data.license} license.
 
 
   ## Contributing
@@ -35,7 +36,7 @@ function generateMarkdown(data) {
 
   ## Questions
   Github profile: [${data.gitName}](https://github.com/${data.gitName})
-  
+
   Contact: ${data.email}
 `;
 }
